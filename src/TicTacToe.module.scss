@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Yesteryear);
+
+$app-background-color : #508ABB;
+$app-row-height : 100%;
+$winAnimStartColor : cyan;
+$winAnimEndColor : #508ABB;
+
+
+@-webkit-keyframes winAnim {
+	0% {
+		background-color: $winAnimStartColor;
+	}
+
+	100% {
+		background-color: $winAnimEndColor;
+	}
+}
+
+@-moz-keyframes winAnim {
+	0% {
+		background-color: $winAnimStartColor;
+	}
+
+	100% {
+		background-color: $winAnimEndColor;
+	}
+}
+
+@-o-keyframes winAnim {
+	0% {
+		background-color: $winAnimStartColor;
+	}
+
+	100% {
+		background-color: $winAnimEndColor;
+	}
+}
+
+@keyframes winAnim {
+	0% {
+		background-color: $winAnimStartColor;
+	}
+
+	100% {
+		background-color: $winAnimEndColor;
+	}
+}
+
+@keyframes winAnim {
+	0% {
+		background-color: $winAnimStartColor;
+	}
+
+	100% {
+		background-color: $winAnimEndColor;
+	}
+}
+
+.center_box {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.app {
+	@extend .center_box;
+	width: 80%;
+	height: 70%;
+	max-width: 550px;
+	background-color: $app-background-color;
+	box-shadow: 0 5px 30px -5px rgba(0, 0, 0, .85);
+	border-radius: 10px;
+
+	.app_container,
+	.app_row {
+		height: $app-row-height;
+	}
+}
+
+.play_box,
+.symbol_option {
+	font-family: 'Yesteryear', cursive;
+}
+
+.play_box {
+	border-bottom: 2px solid #fff;
+	border-right: 2px solid #fff;
+	height: $app-row-height / 3;
+	cursor: pointer;
+	position: relative;
+
+	&.last_right {
+		border-right: none;
+	}
+
+	&.last_bottom {
+		border-bottom: none;
+	}
+
+	&.win {
+		-webkit-animation: winAnim .2s ease-out infinite;
+		-moz-animation: winAnim .2s ease-out infinite;
+		-o-animation: winAnim .2s ease-out infinite;
+		animation: winAnim .2s ease-out infinite;
+		animation: winAnim .5s infinite;
+	}
+
+	.symbol {
+		@extend .center_box;
+		width: 50%;
+		height: 50px;
+		text-align: center;
+		line-height: 50px;
+		font-size: 35px;
+		color: white;
+	}
+}
+
+.modal_content {
+	.content {
+		padding: 15px;
+		text-align: center;
+		margin: 0;
+
+		&.body {
+			line-height: 2;
+		}
+	}
+
+	.symbol_options {
+		width: 200px;
+		margin-top: 10px;
+
+		.symbol_option {
+			&:first-child {
+				margin-right: 10px;
+			}
+
+			&:last-child {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	.warning_hr {
+		margin: 0;
+	}
+}
