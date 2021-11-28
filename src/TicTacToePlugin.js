@@ -1491,7 +1491,7 @@ export const TicTacToePlugin = function(jQuery){
                 for (var _iterator46 = winningPoints[Symbol.iterator](), _step46; !(_iteratorNormalCompletion46 = (_step46 = _iterator46.next()).done); _iteratorNormalCompletion46 = true) {
                     var point = _step46.value;
     
-                    jQuery('#' + point).addClass('win');
+                    jQuery('#' + point).addClass(styles.win);
                 }
             } catch (err) {
                 _didIteratorError46 = true;
